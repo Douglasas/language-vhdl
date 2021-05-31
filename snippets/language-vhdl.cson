@@ -7,7 +7,7 @@
     'body': 'architecture ${1:arch} of $1 is\n\n\tsignal $0\n\nbegin\n\nend architecture;'
   'case':
     'prefix': 'case'
-    'body': 'case( ${1:signal_name} ) is\n\n\twhen ${2:IDLE} =>\n\t\t$0\n\n\twhen others =>\n\nend case;'
+    'body': 'case ${1:signal_name} is\n\n\twhen ${2:IDLE} =>\n\t\t$0\n\n\twhen others =>\n\nend case;'
   'else':
     'prefix': 'else'
     'body': 'else\n\t$0'
