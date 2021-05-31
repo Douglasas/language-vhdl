@@ -61,7 +61,7 @@
     'body': 'unsigned(${1:signal}\'range);$0'
   'vhdl template':
     'prefix': 'vhdl'
-    'body': 'library ieee;\n\tuse ieee.std_logic_1164.all;\n\tuse ieee.numeric_std.all;\n\nentity $1 is\n  port (\n\t${0:clk_i}\n  );\nend entity;\n\narchitecture ${2:arch} of $1 is\n\nbegin\n\nend architecture;'
+    'body': 'library ieee;\nuse ieee.std_logic_1164.all;\nuse ieee.numeric_std.all;\n\nentity $1 is\n  port (\n\t${0:clk_i}\n  );\nend entity;\n\narchitecture ${2:arch} of $1 is\n\nbegin\n\nend architecture;'
   'while':
     'prefix': 'while'
     'body': '${1:identifier} : while ${2:expression} loop\n\t$0\nend loop;'
