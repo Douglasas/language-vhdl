@@ -8,6 +8,12 @@ from the [vhdl.tmbundle](https://github.com/bpadalino/VHDL.tmbundle).
 Contributions are greatly appreciated. Please fork this repository and open a
 pull request to add snippets, make grammar tweaks, etc.
 
+## Install
+* go to ~/.atom/packages
+* git clone https://github.com/Douglasas/language-vhdl
+* apm link
+
+
 ## Version
 * `0.7.2`
   * Fix case-sensitive `END` in component pattern
