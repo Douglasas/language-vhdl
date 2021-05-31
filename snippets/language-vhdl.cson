@@ -62,6 +62,9 @@
   'vhdl template':
     'prefix': 'vhdl'
     'body': 'library ieee;\nuse ieee.std_logic_1164.all;\nuse ieee.numeric_std.all;\n\nentity $1 is\n  port (\n\t${0:clk_i}\n  );\nend entity;\n\narchitecture ${2:arch} of $1 is\n\nbegin\n\nend architecture;'
+  'vhdl simulation template':
+      'prefix': 'vhdl-sim'
+      'body': 'library ieee;\nuse ieee.std_logic_1164.all;\nuse ieee.numeric_std.all;\n\nentity $1 is\nend entity;\n\narchitecture ${2:arch} of $1 is\n\tconstant period : time := 100 ns;\n\tsignal rstn : std_logic := \'0\';\n\tsignal clk : std_logic := \'0\';\nbegin\n\trstn <= \'1\' after period;\n\tclk  <= not clk after period/2;\n\n\tprocess\n\tbegin\n\t\t\n\tend process;\n\nend architecture;'
   'while':
     'prefix': 'while'
     'body': '${1:identifier} : while ${2:expression} loop\n\t$0\nend loop;'
