@@ -1,7 +1,7 @@
 '.source.vhdl':
   'asynchronous process':
     'prefix': 'apro'
-    'body': '${1:identifier} : process(${2:clk_i}, ${3:rstn_i})\nbegin\n\tif ${3:rstn_i} = \'1\' then\n\t\t$0\n\telsif rising_edge(${2:clk_i}) then\n\t\t\n\tend if;\nend process;'
+    'body': '${1:identifier} : process(${2:clk_i}, ${3:rstn_i})\nbegin\n\tif ${3:rstn_i} = \'0\' then\n\t\t$0\n\telsif rising_edge(${2:clk_i}) then\n\t\t\n\tend if;\nend process;'
   'architecture':
     'prefix': 'arch'
     'body': 'architecture ${1:arch} of $1 is\n\n\tsignal $0\n\nbegin\n\nend architecture;'
